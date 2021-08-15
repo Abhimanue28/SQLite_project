@@ -1,0 +1,20 @@
+{% extends 'game_studio/base.html' %}
+
+{% block title %}
+    {{title}}
+{% endblock  %}
+
+
+{% block content %}
+    
+    
+    <h1>{{title}}</h1>
+
+    <h2>{{game_designer}}</h2>
+    <p>#rating({{rating}})
+    {% if top_seller %}
+            is Top notch
+    {% else %}
+            Trash :(
+    {% endif %}
+{% endblock  %}

@@ -1,0 +1,18 @@
+{% extends 'game_studio/base.html' %}
+
+
+{% block title %}
+All Games
+{% endblock  %}
+
+
+{% block content %}
+    <ul>
+        {% for game in games %}
+            <li><a href="{{game.get_absolute_url}}">{{game.title}}</a>(Rating: {{game.rating}})</li>
+        {%endfor%}
+    </ul>
+    <hr>
+    <p>Game count : {{game_count}}</p>
+    <P>Avg_rating: {{average_rating.rating__avg}}</p>
+{% endblock  %}
